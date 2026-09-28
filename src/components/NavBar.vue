@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { t, lang, toggleLang } from '../i18n'
+import LogoMark from './LogoMark.vue'
 
 const scrolled = ref(false)
 const open = ref(false)
@@ -15,8 +16,11 @@ const links = ['about', 'menu', 'events', 'gallery', 'visit']
   <header class="nav" :class="{ scrolled, open }">
     <div class="container nav-inner">
       <a href="#top" class="brand" aria-label="STEEL" @click="open = false">
-        <span class="brand-mark">STEEL</span>
-        <span class="brand-sub">{{ t.brandSub }}</span>
+        <LogoMark />
+        <span class="brand-text">
+          <span class="brand-mark">STEEL</span>
+          <span class="brand-sub">{{ t.brandSub }}</span>
+        </span>
       </a>
 
       <nav class="nav-links">

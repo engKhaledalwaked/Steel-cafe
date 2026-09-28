@@ -90,7 +90,10 @@ p { margin: 0 0 1em; }
   padding-block: 10px; border-color: var(--line);
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand { display: flex; flex-direction: column; line-height: 1; }
+.brand { display: flex; align-items: center; gap: 12px; line-height: 1; }
+.brand-text { display: flex; flex-direction: column; }
+.logo-mark { display: block; height: 44px; width: auto; flex-shrink: 0; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .45)); transition: height .35s; }
+.nav.scrolled .logo-mark { height: 38px; }
 .brand-mark {
   font-family: var(--f-latin); font-weight: 700; font-size: 28px; letter-spacing: .28em;
   background: linear-gradient(180deg, #fff 0%, var(--steel-1) 45%, var(--steel-2) 100%);
@@ -333,6 +336,8 @@ html[lang='en'] .dish h3 { font-size: 22px; font-weight: 700; }
 /* Footer */
 .footer { border-top: 1px solid var(--line); padding-block: 44px 90px; background: #0b0c0e; }
 .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+.foot-brand { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center; }
+.foot-brand .logo-mark { grid-row: span 2; height: 56px; }
 .foot-tag { color: var(--muted); margin: 8px 0 0; font-size: 14px; }
 .socials { display: flex; gap: 10px; }
 .socials a { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); color: var(--steel-1); transition: all .2s; }
@@ -378,6 +383,7 @@ html[lang='en'] .dish h3 { font-size: 22px; font-weight: 700; }
   .demo-ribbon { inset-block-end: auto; inset-block-start: 76px; inset-inline-start: 16px; }
 }
 @media (max-width: 560px) {
+  .logo-mark, .nav.scrolled .logo-mark { height: 34px; }
   .hero { padding-block: 120px 80px; }
   .hero-meta { grid-template-columns: 1fr 1fr; gap: 16px 28px; }
   .hero-meta li:last-child { grid-column: span 2; }

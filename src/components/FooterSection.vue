@@ -1,13 +1,15 @@
 <script setup>
 import { t } from '../i18n'
 import { site } from '../site'
+import LogoMark from './LogoMark.vue'
 const year = new Date().getFullYear()
 </script>
 
 <template>
   <footer class="footer">
     <div class="container footer-inner">
-      <div>
+      <div class="foot-brand">
+        <LogoMark />
         <span class="brand-mark">STEEL</span>
         <p class="foot-tag">{{ t.footer.tag }}</p>
       </div>
